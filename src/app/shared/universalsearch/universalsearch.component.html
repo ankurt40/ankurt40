@@ -1,0 +1,40 @@
+<div class="search-sec">
+                  <form autocomplete="off" >
+                     <div class="row no-gutters custom-search-input-2">
+                        <div class="col-lg-4">
+                           <div class="form-group">
+                          <!--<input class="w-100" type="text" (change)="changeCity($event)" [(ngModel)]="citysearch" id="citysearch" name="citysearch" placeholder="Search For a Place">
+
+                              <i class="fa fa-map-marker"></i>-->  
+<input class="w-100" type="text"  [ngModel]="citysearch" (ngModelChange)="getCitySuggestion($event)" list="cityList" 
+     name="citysearch"    id="citysearch" placeholder="Search For a Place"> 
+
+<datalist id="cityList">
+   <option *ngFor="let item of cityList" [value]="item">{{item}}</option>
+</datalist>
+  
+                           </div>
+                        </div>
+                        <div class="col-lg-3">
+                           <div class="form-group">
+                              <input class="form-control search-slt" type="text" name="dates" placeholder="Select Date...">
+                              <i class="fa fa-calendar"></i>
+                           </div>
+                        </div>
+                        <div class="col-lg-3">
+                           <div class="form-group">
+                          <div class="custom-select-form">
+                              <input class="w-100" type="number"  [(ngModel)]="numberofdays" id="numberofdays" name="numberofdays"
+                              placeholder="Number Of Days"/>
+                           </div>
+                             </div>
+                        </div>
+                        <div class="col-lg-2">
+                         <div class="form-group">
+                           <button type="submit" class="btn_search btn btn-danger wrn-btn ripple" (click)="getDestination()"><span>Search </span></button>  
+                        </div>
+                       </div>                      
+
+                     </div>
+                  </form>
+               </div>

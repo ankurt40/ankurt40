@@ -1,0 +1,13 @@
+ 
+ 
+ <div class="row">
+                              <a  
+                              style="width: 150px ;" class="popup" (click)="showTransitDetails(index,currentday)"> 
+                              <img  height="14" width="14" src="http://127.0.0.1:8000/static/images/icons/sand-clock.png">
+                              <span  id="day{{currentday}}"
+                                 style="color: #a0a0a0 ;font-size: 1.1rem; width=:50%;"></span>
+                              <span class="transitpopup" id="day{{currentday}}transitPopup{{index}}"></span> 
+                              </a>
+</div>
+
+<!--*ngIf="index < places[currentday].length-1"-->

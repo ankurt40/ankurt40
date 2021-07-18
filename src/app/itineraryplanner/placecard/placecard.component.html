@@ -1,0 +1,23 @@
+<div class="vertical-timeline">                        
+ <div class="vertical-timeline-element"  *ngFor="let place of places ; let index = index" style="display: flex;margin-bottom:40px;"  >
+ <span class="placeholder col-md-2">
+  <i class="badge-dot-xl"> <i class="fas fa-check-circle fa-2x" style="color:#1a6fc4"></i></i> 
+ </span> 
+
+              <div class="card col-md-10"  id= "{{place.displayname}}" (mouseover)=markerFunction(place.displayname) > 
+                           <div class="card-body">                           
+                                 <h4 class="card-title h5 h4-sm">{{place.displayname}}</h4>
+                                 <p class="card-text">
+                                 <span class="fa fa-star " style="color: #f6c334;"></span>
+                                  <span class="fa fa-star " style="color: #f6c334;"></span>
+                                   <span class="fa fa-star " style="color: #f6c334;"></span>
+                                    <span class="fa fa-star " style=""></span>
+                                     <span class="fa fa-star " style=""></span>
+
+                                 ({{place.totalgoogletarings}})</p>
+                                 <p class="card-text"><small class="text-muted">{{place.displayname}}</small></p>
+                           </div>
+                      <img  src={{place.image}} class="card-img" alt="...">  
+            </div>
+</div>
+        </div>                   
