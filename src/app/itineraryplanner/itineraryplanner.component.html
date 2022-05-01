@@ -2,45 +2,20 @@
    <div class="row col-md-12">
       <div class="col-lg-5">
         
-            <div class="tab" role="tabpanel">
-               <!-- Nav tabs -->
-               <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation" [ngClass]="{'active': currentday === index}"  *ngFor="let counter of counter(numberofdays) ; let index = index">
-                  <a href="#day{{ index }}" aria-controls="home" role="tab" data-toggle="tab"
-                     (click)="showdaydetails(index)" > Day {{ index +1}}</a>
-                  </li>
-               </ul>
-               <!-- Tab panes -->
-               <div class="tab-content tabs">
-                  <div id="day{{index}}" class="tab-pane fade" [ngClass]="{'active show': currentday === index}" role="tabpanel"
-                  *ngFor="let counter of counter(numberofdays) ; let index = index">
-                  <div class="timeline" id="timelinedataday{{ index }}">
-                     <ul class="start">
-                        <p>Start of the Day {{currentday}}-  9:00 AM </p>
-                     </ul>
-                    
-                     <ul id="sortable+currentday" style="overflow-y: auto;overflow-x: hidden;height: 500px;" >                  
-                        <app-placecard [places] =places[currentday]>
-                           </app-placecard>
-
-                            <app-transitdetails [index] =index [currentday] =currentday >
-                           </app-transitdetails>                      
-
-                     </ul>
-
-                     <ul class="end">
-                        <p>End of the day  {{currentday}} - {{time.getHours()}} :  {{time.getMinutes()}} PM</p>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+         <mat-tab-group>
+            <mat-tab label="First"> Content 1 </mat-tab>
+            <mat-tab label="Second"> Content 2 </mat-tab>
+            <mat-tab label="Third"> Content 3</mat-tab>
+            <mat-tab label="Fourth"> Content 4 </mat-tab>
+            <mat-tab label="Fifth"> Content 5 </mat-tab>
+            <mat-tab label="Six"> Content 6 </mat-tab>
+          </mat-tab-group>
         
       </div>
    </div>
    <div class="col-lg-7">
       <div  id="map" style="min-height: 500px;"></div>
    </div>
-</div>
 </div>
 <div class="popular_places_area">
    <div class="container">
